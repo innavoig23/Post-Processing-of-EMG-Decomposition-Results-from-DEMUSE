@@ -1,2 +1,3 @@
 # Post-Processing of EMG Decomposition Results from DEMUSE
-This is a repository for post-process the EMG (HD-sEMG or iEMG) decomposition results obtained from [DEMUSE®](https://demuse.feri.um.si/).
+
+This repository contains scripts for post-processing the decomposition results of EMG signals (HD-sEMG or iEMG) obtained from [DEMUSE®](https://demuse.feri.um.si/) or from custom-written decomposition algorithms, provided that the results are saved in a format similar to DEMUSE.
