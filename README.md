@@ -6,12 +6,7 @@ This repository contains scripts for post-processing the decomposition results o
 
 These scripts (and others) were used in my [**MSc Thesis at Politecnico di Torino**](https://webthesis.biblio.polito.it/33655/), which focused on analyzing Motor Unit (MU) behavior and functional performance in patients with brachial plexus injuries following nerve transfer surgery.
 
-If you need to process multiple decomposition result files in batch mode, you can transform the main script into a **function** that takes the file path as an input argument. This allows for automated processing of multiple subjects or trials without manually modifying the script each time.
-
-For example:
-```matlab
-function processDecompositionResults(decompResPath)
-```
+If you need to process multiple decomposition result files in batch mode, you can transform the main script into a function (for example, `function processDecompositionResults(decompResPath)` that takes the file path as an input argument. This allows for automated processing of multiple subjects or trials without manually modifying the script each time.
 
 ## Analysis Parameters (`anParams` struct)
 
@@ -19,5 +14,5 @@ To perform the analyses, several key parameters must be specified in the `anPara
 
 - **1. Sampling Frequency (`fsamp`)**: Defines the sampling frequency of the HD-sEMG signals (Hz or sps).
 - **2. Spike-Triggered Averaging (STA) Window Length (`winLen4STA`)**: It is used to extract the Motor Unit Action Potential (MUAP) shape from the EMG signals using the STA technique. This parameter defines the window length (ms) around each detected MU firing.
-- **3. Minimum and Maximum Instantaneous Discharge Rate (IDR) (`minIDR` and `maxIDR`)**: Setting minimum and maximum IDR values ensures that: 3a) very low IDR values (< 4 pps) are excluded, as they may be caused by decomposition errors or spiking pauses, and 3b) in some cases, a known physiological upper bound can be imposed (e.g., 50 pps).during manual editing of the decomposition results. Additionally, for visualization purposes, setting an upper limit helps normalize the IDR plot and ensure all MUs are plotted on the same scale.
+- **3. Minimum and Maximum Instantaneous Discharge Rate (IDR) (`minIDR` and `maxIDR`)**: Setting minimum and maximum IDR values ensures that 3a) very low IDR values (< 4 pps) are excluded, as they may be caused by decomposition errors or spiking pauses, and 3b) in some cases, a known physiological upper bound can be imposed (e.g., 50 pps).during manual editing of the decomposition results. Additionally, for visualization purposes, setting an upper limit helps normalize the IDR plot and ensure all MUs are plotted on the same scale.
 - **4. Trial Information (`numTrials` and `trialDur`)**: 	These parameters are useful when more than one trial are performed as a continuous recording. For example, they allow for: plotting only specific trials, defining the x-axis format (time, samples, trial numbers), computing per-trial metrics (such as mean firing rate, Coefficient of Variation of Interspike Intervals (CoV-ISI), coherence between Cumulative Spike Trains (CST) of different MU groups, and coherence between CST of all identified MUs and exerted force).
