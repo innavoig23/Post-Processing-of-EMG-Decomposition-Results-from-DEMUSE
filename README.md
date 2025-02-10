@@ -32,7 +32,4 @@ To perform the analyses, several key parameters must be specified in the `anPara
 
 
 ## References
-[1] E. Martinez-Valdes, F. Negro, D. Falla, A. M. De Nunzio, and D. Farina,  
-“Surface electromyographic amplitude does not identify differences in neural drive to synergistic muscles,”  
-*J. Appl. Physiol.*, vol. 124, no. 4, pp. 1071–1079, Apr. 2018.  
-Available: [https://doi.org/10.1152/japplphysiol.01115.2017](https://doi.org/10.1152/japplphysiol.01115.2017)
+[1] E. Martinez-Valdes, F. Negro, D. Falla, A. M. De Nunzio, and D. Farina, “Surface electromyographic amplitude does not identify differences in neural drive to synergistic muscles”, *J. Appl. Physiol.*, vol. 124, no. 4, pp. 1071–1079, Apr. 2018. SSN 1522-1601. doi: 10.1152/japplphysiol.01115.2017. URL[https://doi.org/10.1152/japplphysiol.01115.2017](https://doi.org/10.1152/japplphysiol.01115.2017)
