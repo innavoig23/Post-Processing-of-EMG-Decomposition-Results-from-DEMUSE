@@ -5,7 +5,7 @@ close all
 clc
 
 % Results Path Definition
-decompResPath  = '/Users/giova/Library/CloudStorage/OneDrive-Personale/Thesis/p19/decomposition/trap20_HLT_trials_edited_diff.mat';
+decompResPath  = './trap20_HLT_trials_edited_diff.mat';
 data = load(decompResPath, 'MUPulses', 'PNR', 'SIG', 'fsamp', 'ref_signal', 'IED', 'IPTs');
 
 % Analysis Parameters
