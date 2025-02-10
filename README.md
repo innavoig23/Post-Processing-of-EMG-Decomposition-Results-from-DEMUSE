@@ -1,12 +1,25 @@
 # Post-Processing of EMG Decomposition Results from DEMUSE
 
-# Overview
+## Overview
 
 This repository contains scripts for post-processing the decomposition results of EMG signals (HD-sEMG or iEMG) obtained from [DEMUSE®](https://demuse.feri.um.si/) or from custom-written decomposition algorithms, provided that the results are saved in a format similar to DEMUSE.
 
 These scripts (and others) were used in my [**MSc Thesis at Politecnico di Torino**](https://webthesis.biblio.polito.it/33655/), which focused on analyzing Motor Unit (MU) behavior and functional performance in patients with brachial plexus injuries following nerve transfer surgery.
 
 If you need to process multiple decomposition result files in batch mode, you can transform the main script into a function (for example, `function processDecompositionResults(decompResPath)` that takes the file path as an input argument. This allows for automated processing of multiple subjects or trials without manually modifying the script each time.
+
+### **Upcoming Features**
+In the near future, additional functionalities will be included to compute various neuromuscular metrics, such as:
+- **Instantaneous Discharge Rate (IDR) computation**
+- **Coefficient of Variation of Interspike Intervals (CoV-ISI) computation**
+- **Cumulative Spike Train (CST) computation**
+- **Coherence analysis between CST of two different MU groups**
+- **Coherence analysis between CST and exerted force**
+- **Automatic computation of Conduction Velocity (CV) for individual MUs**
+- **Estimation of MU Territory**
+
+Additionally, a **(GUI)** might be developed in the future to simplify the processing and visualization of results.
+
 
 ## Analysis Parameters (`anParams` struct)
 
