@@ -6,7 +6,7 @@ This repository contains scripts for post-processing the decomposition results o
 
 These scripts (and others) were used in my [**MSc Thesis at Politecnico di Torino**](https://webthesis.biblio.polito.it/33655/), which focused on analyzing Motor Unit (MU) behavior and functional performance in patients with brachial plexus injuries following nerve transfer surgery.
 
-If you need to process multiple decomposition result files in batch mode, you can transform the main script into a function (for example, `function processDecompositionResults(decompResPath)` that takes the file path as an input argument. This allows for automated processing of multiple subjects or trials without manually modifying the script each time.
+If you need to process multiple decomposition result files in batch mode, you can transform the main script into a function (for example, `function processDecompositionResults(decompResPath)`) that takes the file path as an input argument. This allows for automated processing of multiple subjects or trials without manually modifying the script each time.
 
 ### **Upcoming Features**
 In the near future, additional functionalities will be included to compute various neuromuscular metrics, such as:
@@ -18,7 +18,7 @@ In the near future, additional functionalities will be included to compute vario
 - **Automatic computation of Conduction Velocity (CV) for individual MUs**
 - **Estimation of MU Territory**
 
-Additionally, a **(GUI)** might be developed in the future to simplify the processing and visualization of results.
+Additionally, a **Graphical User Interface (GUI)** might be developed in the future to simplify the processing and visualization of results.
 
 
 ## Analysis Parameters (`anParams` struct)
