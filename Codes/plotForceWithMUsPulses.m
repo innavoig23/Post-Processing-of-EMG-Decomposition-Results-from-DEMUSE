@@ -1,4 +1,4 @@
-function plotForceWithMUsPulses(data)
+function plotForceWithMUsPulses(data, anParams, xTimeFlag)
 
 %% Initialization
 % Check if force signal is available
@@ -41,9 +41,26 @@ if refSigAvailability
     ylim([-1, max(forceSig) * 1.1]);
 end
 
+
 %% Set x-axis properties
-xlim([timeVector(1) timeVector(end)]);
-xlabel('Time (s)', 'FontWeight', 'bold');
+% Limits
+xlim([timeVector(1) timeVector(end)])
+
+% Ticks and Labels
+% Decide to set x-axis with trials (if applicable) or time
+if xTimeFlag
+    xlabel('Time (s)', FontWeight='bold');
+    xticks('auto'); % use default tick locations
+else
+    trialDur = anParams.trialDur;
+    numTrials = anParams.numTrials;
+    trialLen = trialDur * fsamp;
+    xTickValues = trialLen * (0.5:1:numTrials - 0.5) / fsamp; % midpoints for each trial (s)
+    xticks(xTickValues)
+    xTickLabels = arrayfun(@(x) sprintf('%d', x), 1:numTrials, 'UniformOutput', false); % labels for each trial (1, 2, 3, ...)
+    xticklabels(xTickLabels)
+    xlabel('Trial', FontWeight='bold');
+end
 
 %% Set plot settings
 set(gca, 'FontSize', 16);
