@@ -5,7 +5,7 @@ close all
 clc
 
 % Results Path Definition
-decompResPath  = './trap20_HLT_trials_edited_diff.mat';
+decompResPath  = './trap20_trials_edited_diff_HLT.mat';
 data = load(decompResPath, 'MUPulses', 'PNR', 'SIG', 'fsamp', 'ref_signal', 'IED', 'IPTs');
 
 % Analysis Parameters
