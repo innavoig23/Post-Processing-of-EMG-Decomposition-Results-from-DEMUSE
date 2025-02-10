@@ -8,7 +8,6 @@ clc
 decompResPath  = '/Users/giova/Library/CloudStorage/OneDrive-Personale/Thesis/p19/decomposition/trap20_HLT_trials_edited_diff.mat';
 data = load(decompResPath, 'MUPulses', 'PNR', 'SIG', 'fsamp', 'ref_signal', 'IED', 'IPTs');
 
-
 % Analysis Parameters
 anParams.fsamp = data.fsamp; % sampling frequency of HD-sEMG signals (Hz, sps)
 anParams.winLen4STA = 40; % window for Spike-Triggered Averaging (STA) (ms)
@@ -36,23 +35,27 @@ trialToPlot = 2; % [] is trials is not applicable, otherwise specify the trial t
 samplesToPlot = 1+(anParams.trialDur*anParams.fsamp*(trialToPlot-1)):anParams.trialDur*anParams.fsamp*(trialToPlot); % do not change. it will be [] if trials is not applicable; [] for all trials, start:end for the specified trial
 forcePlotFlag = false; % decide if plot reference signal overlayed to EMG signals
 
-plotEMGSignals(data, xTimeFlag, MSDFlags, samplesToPlot, forcePlotFlag);
+% plotEMGSignals(data, xTimeFlag, MSDFlags, samplesToPlot, forcePlotFlag);
 
 clear xTimeFlag MSDFlags trialToPlot samplesToPlot forcePlotFlag
 
 %% Plot: Force Signal with MUs' Istantaneous Firing Rates
 xTimeFlag = false;
 
-plotForceWithMUsIDR(data, anParams, xTimeFlag)
+% plotForceWithMUsIDR(data, anParams, xTimeFlag)
 
 clear xTimeFlag
 
 %% Plot: Force Signal with MUs' Firing Instants
-plotForceWithMUsPulses(data)
+xTimeFlag = false;
+
+% plotForceWithMUsPulses(data, anParams, xTimeFlag)
+
+clear xTimeFlag
 
 %% Plot: MUAPs Templates
 MSDFlags = [true, true, true]; % flags to plot MUAPs Templates obtained from monopolar, single differential and/or double differential signals
 
-plotMUAPsTemplatesConcatenated(data, MSDFlags);
+% plotMUAPsTemplatesConcatenated(data, MSDFlags);
 
 clear xTimeFlag MSDFlags
