@@ -15,7 +15,7 @@ In the near future, additional functionalities will be included to compute vario
 - **Cumulative Spike Train (CST) computation**
 - **Coherence analysis between CST of two different MU groups**
 - **Coherence analysis between CST and exerted force**
-- **Automatic computation of Conduction Velocity (CV) for individual MUs**
+- **Automatic estimation of Conduction Velocity (CV) for individual MUs**
 - **Estimation of MU Territory**
 
 Additionally, a **Graphical User Interface (GUI)** might be developed in the future to simplify the processing and visualization of results.
@@ -27,7 +27,7 @@ To perform the analyses, several key parameters must be specified in the `anPara
 
 - **1. Sampling Frequency (`fsamp`)**: Defines the sampling frequency of the HD-sEMG signals (Hz or sps).
 - **2. Spike-Triggered Averaging (STA) Window Length (`winLen4STA`)**: It is used to extract the Motor Unit Action Potential (MUAP) shape from the EMG signals using the STA technique. This parameter defines the window length (ms) around each detected MU firing.
-- **3. Minimum and Maximum Instantaneous Discharge Rate (IDR) (`minIDR` and `maxIDR`)**: Setting minimum and maximum IDR values ensures that 3a) very low IDR values (< 4 pps) are excluded, as they may be caused by decomposition errors or spiking pauses [1], and 3b) in some cases, a known physiological upper bound can be imposed (e.g., 50 pps).during manual editing of the decomposition results. Additionally, for visualization purposes, setting an upper limit helps normalize the IDR plot and ensure all MUs are plotted on the same scale.
+- **3. Minimum and Maximum Instantaneous Discharge Rate (IDR) (`minIDR` and `maxIDR`)**: Setting minimum and maximum IDR values ensures that 3a) very low IDR values (< 4 pps) are excluded, as they may be caused by decomposition errors or spiking pauses [1], and 3b) in some cases, a known physiological upper bound can be imposed (e.g., 50 pps) during manual editing of the decomposition results. Additionally, for visualization purposes, setting an upper limit helps normalize the IDR plot and ensure IDR of all MUs are plotted with the same scale.
 - **4. Trial Information (`numTrials` and `trialDur`)**: 	These parameters are useful when more than one trial are performed as a continuous recording. For example, they allow for: plotting only specific trials, defining the x-axis format (time, samples, trial numbers), computing per-trial metrics (such as mean firing rate, Coefficient of Variation of Interspike Intervals (CoV-ISI), coherence between Cumulative Spike Trains (CST) of different MU groups, and coherence between CST of all identified MUs and exerted force).
 
 
